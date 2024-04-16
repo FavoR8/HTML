@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SALARIO</title>
+    <!-- link de sitio sweetalert mensajes más elegantes-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- link hoja de estilo css -->
+    <link rel="stylesheet" href="./css/ESTILOS_TABLA.css">
+</head>
+<body>
+    <center>
+        <h1>PAGO DE SALARIO DE EMPLEADO</h1>
+        <h2>USO DE CONDICIONAL SI</h2>
+        <Script>
+            let dias, vdia, subtotal, bonificacion, total;
+            bonificacion = 50000;
+            dias = parseInt(prompt("Ingrese cantidad de dias trabajados"));
+            vdia=parseInt(prompt("Ingrese el valor de un dia"));
+            subtotal = dias*vdia;
+            //Seccion de condicional
+            if (dias > 15){
+                total = subtotal + bonificacion;
+                document.write("<table><caption>RELACION DE PAGO</caption><tr><th>DIAS TRABAJADOS</th><td>",dias, "</td></tr> <tr><th> VALOR DIA </th><td>",vdia,"</td></tr> <tr><th> BONIFICACION </th><td>",bonificacion,"</td></tr><tr><th> VALOR A PAGAR</th><td>", total,"</td></tr></table>");
+            }else{
+                bonificacion = 0;
+                total = subtotal + bonificacion;
+                document.write("<table><caption>RELACION DE PAGO</caption><tr><th>DIAS TRABAJADOS</th><td>",dias, "</td></tr> <tr><th> VALOR DIA </th><td>",vdia,"</td></tr> <tr><th> BONIFICACION </th><td>",bonificacion,"</td></tr><tr><th> VALOR A PAGAR</th><td>", total,"</td></tr></table>");
+            }
+        </Script>
+    </center>
+</body>
+</html>
